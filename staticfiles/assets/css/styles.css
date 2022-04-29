@@ -1,0 +1,27 @@
+body {
+        background: url('/static/images/bg.jpeg');
+        /* background-repeat: no-repeat; */
+        background-size: 100%;
+}
+
+h2{
+    margin-top:30px;
+    color:#170B6D;
+}
+
+@media only screen and (max-width: 600px) {
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid rgba(5, 0, 0, 0.877);  
+    }
+
+    h2{
+        margin-top:30px;
+        color:#170B6D;
+        margin:auto;
+        margin-bottom: 20px;
+    }
+
+  }

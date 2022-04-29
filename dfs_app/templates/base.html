@@ -1,0 +1,14 @@
+{% comment %} {% extends 'base.html' %}  {% endcomment %}
+<title>demo_dfs_pageee</title>
+
+
+<table border=1>
+{% for dict_item in lst %}
+<tr>
+   {% for key, value in dict_item.items %}
+      {% comment %} <h1>Key: {{key}}</h1> {% endcomment %}
+      <td>{{value}}</td>
+   {% endfor %}
+</tr>
+{% endfor %}
+</table>

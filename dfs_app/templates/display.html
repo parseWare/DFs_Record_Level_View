@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+   </head>
+   
+<title>demo_dfs_pageee</title>
+<center>
+    {% load static %}   
+<body>
+<h2> iHub-Data Foundations </h2>
+
+<table border=1 , style="width:50%; border-spacing : 2px;">
+    <tr>
+        <th> ID </th>
+        <th>Name</th>
+        <th>Roll_no</th>
+        <th>Image</th>
+        <th>City</th>
+        <th>Contact</th>
+    </tr>
+
+    {% for item in lst %}
+    <tr>
+        {% comment %} {% with ''|center:cnt as range %} {% endcomment %}
+        {% for key,val in item.items %}
+            {% if key == 'image' %}
+                {% comment %} <img src={{val}}> {% endcomment %}
+                {% comment %} {{item.values.i}} {% endcomment %}
+                
+                <td style="text-align: center;">
+                    {% load static %}
+                    <img src="{% static val %}" width="150" height="100"/>
+                </td> 
+            {% else %}
+                <td style="text-align: center;" >{{val}}</td>
+            {% endif %}
+        {% endfor %}
+        {% comment %} {% endwith %}  {% endcomment %}
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</center>
+</html>
+
